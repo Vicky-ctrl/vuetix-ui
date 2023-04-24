@@ -1,0 +1,10 @@
+@define-mixin inset-button{
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    font: inherit;
+    cursor: pointer;
+}

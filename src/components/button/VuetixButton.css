@@ -1,0 +1,6 @@
+@import "@/style/base/inset.css";
+
+.tix-button{
+    @mixin inset-button;
+    padding: rem(20px 40px);
+}

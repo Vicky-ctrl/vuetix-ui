@@ -1,0 +1,1 @@
+export { default as VuetixButton } from "@/components/button/VuetixButton.vue"
