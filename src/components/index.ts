@@ -1,1 +1,1 @@
-export { default as VuetixButton } from "@/components/button/VuetixButton.vue"
+export { default as TixButton } from "@/components/button/VuetixButton.vue"

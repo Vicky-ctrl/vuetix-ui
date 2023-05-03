@@ -1,21 +1,19 @@
-<script setup lang='ts'>
-</script>
+<script setup lang='ts'></script>
 
 <template>
-    <tix-button></tix-button>
+    <x-button class="button">
+        click me
+        <template #tag>
+            tag
+        </template>
+    </x-button>
 </template>
+
 <script lang="ts">
-const digui = (index: number) => {
-    count += index
-    if (index < 100) {
-        index ++
-        digui(index)
-    } else {
-        console.log(count, "is count")
-        return count
-    }
-}
-var count = 0
-var index = 1
-digui(index)
 </script>
+
+<style scoped>
+.button{
+    --glitch-text: "hover"
+}
+</style>

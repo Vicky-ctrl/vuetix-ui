@@ -4,7 +4,7 @@ import type { App } from "vue"
 import * as components from "@/components/index"
 
 export const createVuetixUI = () => {
-    components["VuetixButton"].name = "tixButton"
+    components["TixButton"].name = "xButton"
     return {
         install: (app:App) => {
             forEach(components, (component) => {
