@@ -7,19 +7,18 @@
 <script setup lang='ts'>
 import { onMounted, ref } from "vue";
 import "./VuetixButton.css"
-import { delay } from "lodash-es";
+// import { delay } from "lodash-es";
 
-// 1. 原生js
 const TixButton = ref<HTMLButtonElement>()
-
-// 2. v-bind方法
-const glitchText = ref('点我呀')
+const setProperty: TixButtonFuc["setProperty"] = (key: TixButtonProperty, value: any) => {
+    TixButton.value?.style.setProperty(key, value)
+}
 onMounted(() => {
-    // glitchText.value = "hover me"
-    // delay(() => {
-        // glitchText.value = "hover me"
-        // TixButton.value?.style.setProperty("--bg", "var(--blue)")
-    // }, 5000)
+    setProperty('--bg', 'var(--yellow)')
+})
+
+defineExpose({
+    setProperty
 })
 </script>
 
@@ -35,8 +34,7 @@ onMounted(() => {
 
 <style scoped>
 .tix-button{
-    --color: var(--w);
     --bg: var(--red);
-    --glitch-text: v-bind(glitchText);
+    --glitch-text: "Hello";
 }
 </style>
